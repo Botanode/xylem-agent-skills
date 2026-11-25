@@ -163,3 +163,13 @@ Total unified in-house library: 106 skills (77 pack + 12 platform + 17 existing 
 
 Total unified in-house library: 112 skills.
 
+## Modular and plugin design (3)
+
+| Skill ID | Purpose |
+|---|---|
+| `xylem-modular-design` | Design opinionated Xylem module boundaries: one responsibility per module, inward/downward dependencies, no cycles, stable versioned seams, no duplicated implementations, explicit ownership and testability. |
+| `xylem-plugin-architecture` | Design plugin-centric Xylem systems where the core owns contracts and ports and versioned plugins implement them. |
+| `xylem-extension-points` | Decide where and how to add an extension point in a Xylem app: adapter versus plugin, configuration versus code, seam placement, deterministic registration, diagnostics and fake-implementation tests. |
+
+Total unified in-house library: 115 skills.
+

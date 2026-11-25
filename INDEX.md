@@ -51,6 +51,9 @@ Both repositories' AGENTS.md should point to this index.
 | `xylem-app-build` | Compile/build with pinned tool identity and build record | Building or compiling an app | Source-backed; pending independent verification |
 | `xylem-app-verification` | Prove app correctness with fixtures and independent verifier | Verifying an app | Source-backed; pending independent verification |
 | `xylem-app-delivery` | Seven-gate app delivery method with STOP conditions | Taking an app from research to integration | Source-backed; pending independent verification |
+| `xylem-modular-design` | Opinionated module boundaries and dependency direction | Splitting modules or reviewing boundaries | Source-backed; pending independent verification |
+| `xylem-plugin-architecture` | Plugin-centric core/plugin contracts, lifecycle and trust | Designing a plugin system | Source-backed; pending independent verification |
+| `xylem-extension-points` | Where and how to add extension points without sprawl | Adding an extension seam to an app | Source-backed; pending independent verification |
 
 ## Coverage matrix
 
@@ -68,6 +71,7 @@ Both repositories' AGENTS.md should point to this index.
 | Platform quality | platform-testing, platform-performance-guardrails, platform-review |
 | Platform products | platform-app-archetypes, platform-documentation, agent-workflow |
 | Application delivery | app-research, app-design, app-implementation, app-build, app-verification, app-delivery |
+| Modular / plugin design | modular-design, plugin-architecture, extension-points |
 
 ## Rules for all skills
 
