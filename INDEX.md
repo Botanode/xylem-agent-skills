@@ -54,6 +54,7 @@ Both repositories' AGENTS.md should point to this index.
 | `xylem-modular-design` | Opinionated module boundaries and dependency direction | Splitting modules or reviewing boundaries | Source-backed; pending independent verification |
 | `xylem-plugin-architecture` | Plugin-centric core/plugin contracts, lifecycle and trust | Designing a plugin system | Source-backed; pending independent verification |
 | `xylem-extension-points` | Where and how to add extension points without sprawl | Adding an extension seam to an app | Source-backed; pending independent verification |
+| `xylem-web-framework` | Aurelia-like Xylem web authoring and L4a/WASM build path | Authoring or reviewing web components, views, bindings, hooks or plugins | Source-backed; pending independent verification |
 
 ## Coverage matrix
 
@@ -72,6 +73,7 @@ Both repositories' AGENTS.md should point to this index.
 | Platform products | platform-app-archetypes, platform-documentation, agent-workflow |
 | Application delivery | app-research, app-design, app-implementation, app-build, app-verification, app-delivery |
 | Modular / plugin design | modular-design, plugin-architecture, extension-points |
+| Web framework | web-framework |
 
 ## Rules for all skills
 

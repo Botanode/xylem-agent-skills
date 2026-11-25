@@ -173,3 +173,11 @@ Total unified in-house library: 112 skills.
 
 Total unified in-house library: 115 skills.
 
+## Web framework (1)
+
+| Skill ID | Purpose |
+|---|---|
+| `xylem-web-framework` | Author and review Xylem-native .xylem/.view components, bindings, lifecycles, plugins and the L4a-to-WASM build path. |
+
+Total unified in-house library: 116 skills.
+
