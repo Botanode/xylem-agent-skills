@@ -1,0 +1,117 @@
+// Category scalar — complete Xylem counterparts for all 12 cases.
+// Generated from verified syntax; bounded arithmetic respects checked semantics.
+const CASE: usize = 1
+fn f001(n: i64, seed: i64) -> i64 {
+    let mut x = seed % 1000000007
+    let mut c: i64 = 0
+    let mut i: i64 = 0
+    while i < n { x = (x * 3 + 7) % 1000000007; c = (c + x) % 1000000007; i = i + 1 }
+    return c
+}
+
+fn f002(n: i64, seed: i64) -> i64 {
+    let mut x = seed % 1000000007
+    let mut c: i64 = 0
+    let mut i: i64 = 0
+    while i < n { x = (x * 5 + 11) % 1000000007; c = (c + x) % 1000000007; i = i + 1 }
+    return c
+}
+
+fn f003(n: i64, seed: i64) -> i64 {
+    let mut c: i64 = 0
+    let mut i: i64 = 0
+    while i < n { c = (c + ((i + seed) % 1000000007)) % 1000000007; i = i + 1 }
+    return c
+}
+
+fn f004(n: i64, seed: i64) -> i64 {
+    let mut x = seed % 1000000007
+    let mut c: i64 = 0
+    let mut i: i64 = 0
+    while i < n { x = (x * 7 + 3) % 1000000007; c = (c + x) % 1000000007; i = i + 1 }
+    return c
+}
+
+fn f005(n: i64, seed: i64) -> i64 {
+    let mut x = seed % 1000000007
+    let mut c: i64 = 0
+    let mut i: i64 = 0
+    while i < n { x = (x * 3 + 1) % 1000000007; c = (c + x) % 1000000007; i = i + 1 }
+    return c
+}
+
+fn f006(n: i64, seed: i64) -> i64 {
+    let mut c: i64 = 0
+    let mut x = seed
+    let mut i: i64 = 0
+    while i < n { x = (x * 5 + 11) % 1000000007; if x % 2 == 1 as i64 { c = (c + x) % 1000000007 } else { c = (c + (0 - x)) % 1000000007 }; i = i + 1 }
+    return c
+}
+
+fn f007(n: i64, seed: i64) -> i64 {
+    let mut c: i64 = 0
+    let mut i: i64 = 0
+    while i < n { c = (c + i % 128) % 1000000007; i = i + 1 }
+    return c
+}
+
+fn f008(n: i64, seed: i64) -> i64 {
+    let k = seed + 1
+    let mut c: i64 = 0
+    let mut i: i64 = 0
+    while i < n { c = (c + k * 3 + 7) % 1000000007; if i % 8 == 0 { c = (c + k) % 1000000007 }; i = i + 1 }
+    return c
+}
+
+fn f009(n: i64, seed: i64) -> i64 {
+    let mut x = seed % 1000000007
+    let mut c: i64 = 0
+    let mut i: i64 = 0
+    while i < n { x = (x * 3 + 7) % 1000000007; c = (c + x) % 1000000007; i = i + 1 }
+    return c
+}
+
+fn f010(n: i64, seed: i64) -> i64 {
+    let mut x = seed % 1000000007
+    let mut c: i64 = 0
+    let mut i: i64 = 0
+    while i < n { x = (x * 11 + 5) % 1000000007; c = (c + x) % 1000000007; i = i + 1 }
+    return c
+}
+
+fn f011(n: i64, seed: i64) -> i64 {
+    let mut x = seed % 1000000007
+    let mut c: i64 = 0
+    let mut i: i64 = 0
+    while i < n { x = (x * 3 + 1) % 1000000007; c = (c + x) % 1000000007; i = i + 1 }
+    return c
+}
+
+fn f012(n: i64, seed: i64) -> i64 {
+    let mut x = seed % 1000000007
+    let mut c: i64 = 0
+    let mut i: i64 = 0
+    while i < n { x = (x * 7 + 9) % 1000000007; c = (c + x) % 1000000007; i = i + 1 }
+    return c
+}
+
+fn main() -> i32 effects [allocation] {
+    let mut n: i64 = 4096
+    if CASE == 1 { n = 64 }
+    let seed: i64 = 12345
+    let mut checksum: i64 = 0
+    if CASE == 1 { checksum = f001(n, seed) }
+    if CASE == 2 { checksum = f002(n, seed) }
+    if CASE == 3 { checksum = f003(n, seed) }
+    if CASE == 4 { checksum = f004(n, seed) }
+    if CASE == 5 { checksum = f005(n, seed) }
+    if CASE == 6 { checksum = f006(n, seed) }
+    if CASE == 7 { checksum = f007(n, seed) }
+    if CASE == 8 { checksum = f008(n, seed) }
+    if CASE == 9 { checksum = f009(n, seed) }
+    if CASE == 10 { checksum = f010(n, seed) }
+    if CASE == 11 { checksum = f011(n, seed) }
+    if CASE == 12 { checksum = f012(n, seed) }
+    print(checksum)
+    return 0
+}
