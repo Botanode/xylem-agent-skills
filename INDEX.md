@@ -1,6 +1,7 @@
 # Xylem agent skills index
 
-Canonical library location: `xylem-lang/.agents/skills/`.
+Canonical source repository: `https://github.com/Botanode/xylem-agent-skills`.
+This directory is an installed copy; regenerate from that repository after changes.
 
 **Unified catalog:** `SKILL-CATALOG.md` is the single list of all 106 in-house
 skills (77 engineering pack + 12 platform/ecosystem + 17 existing compiler and
