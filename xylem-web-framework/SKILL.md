@@ -28,6 +28,24 @@ the build path. Read `docs/decisions/D-001`, `D-002`, and
   `two-way`. Each mode MUST be represented as a closed write set on contiguous
   state; no runtime observer, proxy or change-tracking object is permitted.
 
+## Styling — MUST be token-first
+
+The portable styling contract is L4a `UiLayout` + `UiStyle.tokens` + theme tokens,
+not CSS. The web adapter maps tokens to inline custom properties; native adapters
+map the same tokens to native widget styling. Tailwind is an **L4b web styling
+tool**: `xylem-web/styles.rs` compiles `app.css` with a pinned Tailwind v4 engine
+and `tailwind.lock` for the web build only.
+
+- MUST express shared styling as semantic tokens (`surface`, `accent`, spacing,
+  typography roles) in the component model and `.view` metadata.
+- MUST treat Tailwind utility names as token-producing conveniences only; a
+  utility that cannot map to a token is web-only and marked DEFERRED.
+- MUST NOT put raw CSS, selectors, pseudo-classes, media queries, animations or
+  browser-only layout rules in `.view`. Those are web-only escape hatches and are
+  DEFERRED for desktop/mobile.
+- MUST NOT claim styling parity across web/desktop/mobile. Only the token subset
+  is portable; native adapters decide how each token renders.
+
 ## Lifecycle — MUST be explicit and ordered
 
 The canonical order is `created, binding, bound, attaching, attached, detaching,
